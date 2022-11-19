@@ -1,0 +1,528 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ scroll-behavior: smooth;
+}
+
+.bungkus {
+ margin-top: 80px;
+ padding-top: 30px;
+}
+
+.navbar {
+ position: fixed;
+ width: 100vw;
+ margin-top: -80px;
+ z-index: 3;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  background-color: black;
+ height: 1000px;
+}
+
+
+/* burger icon */
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: whitesmoke;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+.change .bar2 {opacity: 0;   background-color: white;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
+}
+
+/* wraper */
+
+.wrapper {
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* box-shadow: 5px 5px 10px 2px rgba(255,255,255,.1); */
+  background-color: rgba(0,0,0,.4);
+  border-bottom: 2px solid white;
+}
+
+nav .brand a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 550;
+  color: whitesmoke;
+
+}
+
+.bg-sidebar {
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.9);
+  transition: .3s;
+  visibility: hidden;
+}
+
+.bg-sidebar.change {
+  right: 0;
+  visibility: visible;
+  display: block;
+}
+
+nav ul {
+    display: flex;
+    position: fixed;    
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    transition: .5s;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+nav ul.change {
+    right: 0;
+    transition: .5s;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 20px 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.blur {
+background-color: #545454be;
+ 
+}
+
+@media screen and (min-width: 960px) {
+
+  
+ .conten-2 .github {
+  font-size: 1.5rem;  
+
+ }
+
+
+.navbar {
+ position: fixed;
+ width: 100vw;
+}
+#skill {
+ position: static;
+ margin-top: 500px;
+}
+
+#skill .astro {
+ width: 500px;
+ height: 500px;
+}
+
+#skill .teks {
+ font-size: 1.4rem;
+ margin-right: 30px;
+}
+
+#skill .persentase {
+ width: 100vw;
+ font-size: 2.5rem;
+ padding-top: 155px;
+ margin-top: -120px
+}
+
+#skill .persentase .progres {
+ width: 200px;
+ height: 80px;
+}
+
+#skill .box {
+ height: 20px;
+}
+
+#skill .box-1 {
+ height: 20px;
+}
+
+#skill .box-2 {
+ height: 20px;
+}
+.bungkus .conten ,#home {
+ margin-top: -70px;
+}
+
+.gif .gif-item {
+ width: 400px;
+ height: 400px;
+ margin-right: 100px;
+ margin-top: 30px;
+ float: right;
+}
+
+#home .title {
+ position: relative;
+ top: 300px;
+ right: 250px;
+}
+
+#home .title .nama {
+ color: red;
+ font-size: 4rem;
+ display: block;
+}
+  .bg-sidebar.change {
+   right: 0;
+   visibility: hidden;
+   display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+      position: relative;    
+      background-color: rgba(0,0,0,.4);
+      top: unset;
+      bottom: unset;
+      right: unset;
+      width: unset;
+      flex-direction: row;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+
+  }
+
+  nav ul li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    background-color: limegreen;
+    transform: translatey(20px);
+  }
+
+
+  nav ul li a {
+    color: whitesmoke;
+    font-size: 1.1rem;
+  }
+
+  nav ul li:last-child {
+    font-weight: 550;
+  }
+  
+}
+
+
+.sidebar li i {
+  margin-left: 10px;
+}
+
+.logo {
+ width: 200px;
+ margin-left: 20px;
+ border-radius: 15px;
+
+}
+
+@media screen and (min-width: 1200px) {
+  .container-flex {
+   width: 100%;
+   max-width: 1024px;
+   margin: auto;
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+}
+
+#home h3 {
+ font-family: Arial, Helvetica, sans-serif;
+font-size: 2.5rem;
+ 
+}
+
+#home .nama {
+ color: red;
+}
+
+#home p {
+ font-size: 13px;
+}
+
+.title {
+ margin-top: 50px;
+ margin-left: 40px;
+ font-size: 30px;
+}
+
+.gif-item {
+ width: 200px;
+ height: 200px;
+margin-right: 40px;
+margin-top: 30px;
+}
+
+.conten {
+ text-align: center;
+}
+/* <>style buatan */
+.skill {
+ padding-top: 40px;
+}
+.image .astro {
+ width: 200px;
+ height: 200px;
+ position: absolute;
+}
+
+.teks {
+ float: right;
+ position: relative;
+ padding-top: 40px;
+}
+/* progres */
+.persentase {
+ display: inline-block;
+ text-align: center;
+ margin-top: -120px;
+ margin-left: 50px;
+}
+.progres{
+ display: inline-block;
+			width: 100px;
+			background: black;
+			position: relative;
+			margin-top: 100px;
+			border-radius: 25px;
+			box-sizing: border-box;
+			box-shadow: 0 10px 20px rgba(0,0,0,.5);
+   padding-left: 30px;
+ 		}
+		.box{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			border-radius: 5px;
+			background: #f1f1f1;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			overflow: hidden;
+			text-align: center;
+		}
+		.box:after
+		{
+			content: '';
+			position: absolute;
+			left:0;
+			width: 0%;
+			height: 100%;
+			border-radius:5px;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			 animation-name: load;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+		}
+		.box-1{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			border-radius: 5px;
+			background: #f1f1f1;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			overflow: hidden;
+			text-align: center;
+		}
+		.box-1:after
+		{
+			content: '';
+			position: absolute;
+			left:0;
+			width: 0%;
+			height: 100%;
+			border-radius:5px;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			 animation-name: load-1;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+		}
+		.box-2 {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			border-radius: 5px;
+			background: #f1f1f1;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			overflow: hidden;
+			text-align: center;
+		}
+		.box-2:after
+		{
+			content: '';
+			position: absolute;
+			left:0;
+			width: 0%;
+			height: 100%;
+			border-radius:5px;
+			box-shadow: insert 0  0 5px rgba(0,0,0,.2);
+			 animation-name: load-2;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+		}
+		@keyframes load {
+			0%
+			{
+				width: 0%;
+				background: #ff0;
+			}
+			100%
+			{
+				width:90%;
+				background: #f0f;
+			}
+		}
+		@keyframes load-1 {
+			0%
+			{
+				width: 0%;
+				background: #ff0;
+			}
+			100%
+			{
+				width:70%;
+				background: skyblue;
+			}
+		}
+		@keyframes load-2 {
+			0%
+			{
+				width: 0%;
+				background: #ff0;
+			}
+			100%
+			{
+				width:50%;
+				background: red;
+			}
+		}
+		/* akhir progres */
+/* awal conten-2 */
+.conten-2 h3 {
+ font-size: 1.5rem;
+ text-align: center;
+ padding-top: 80px;
+ padding-bottom: 40px;
+}
+.conten-2 {
+ text-align: center;
+ padding-left: 15px;
+ padding-right: 15px;
+ padding-bottom: 30px;
+}
+ .conten-2 p {
+  padding-bottom: 30px;
+ }
+ 
+.github {
+ padding-left: 30px;
+ padding-right: 30px;
+ padding-top: 10px;
+ padding-bottom: 15px;
+ border-radius: 10px;
+ border: none;
+}
+.github i {
+ font-size: 1.4rem;
+}
+
+
+.contact {
+ background-color: dimgrey;
+ font-size: .8rem;
+ margin-top: 40px;
+ margin-bottom: 40px;
+ padding-top: 40px;
+ padding-bottom: 40px;
+}
+
+.contact a {
+ color: whitesmoke;
+ text-decoration: none;
+}
+
+.contact li a:hover {
+ color: lightblue;
+}
+
+.contact .con-2 {
+ margin-top: 40px;
+}
+
+.contact .thx {
+ text-align: center;
+}
+.con-1 {
+ padding-left: 20px;
+}
+.con-2 {
+ padding-left: 20px;
+}
+.contact ul li {
+ list-style: none;
+}
